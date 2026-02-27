@@ -3,6 +3,17 @@
 #include "StartRoom.h"
 #include "ForestRoom.h"
 #include "StorageRoom.h"
+#include "ArmoryRoom.h"
+#include "BalconyRoom.h"
+#include "CornerRoom.h"
+#include "CorridorRoom.h"
+#include "GateRoom.h"
+#include "GreatRoom.h"
+#include "PassageRoom.h"
+#include "SecretRoom.h"
+#include "ThroneRoom.h"
+#include "TreasureRoom.h"
+#include "LowerRoom.h"
 #include "Globals.h"
 
 using namespace std;
@@ -19,20 +30,75 @@ string toLowerCase(string text) { //almost forgot Uppercase cases
     return text;
 }
 
+StartRoom start; //I put them here since now making the map is a bit more complex I can put it in an auxiliary function.
+ForestRoom forest;
+StorageRoom storage;
+ArmoryRoom armory;
+BalconyRoom balcony;
+CornerRoom corner;
+CorridorRoom corridor;
+GateRoom gate;
+GreatRoom great;
+PassageRoom passage;
+SecretRoom secret;
+ThroneRoom throne;
+TreasureRoom treasure;
+LowerRoom lower;
+
+
+void setupMap() {
+    start.setNorth(&great);
+    
+    great.setWest(&passage);
+    great.setEast(&corridor);
+    great.setNorth(&forest);
+    great.setSouth(&start);
+
+    forest.setNorth(&gate);
+    forest.setSouth(&great);
+    forest.setWest(&armory);
+    forest.setEast(&throne);
+
+    passage.setWest(&storage);
+    passage.setEast(&great);
+
+    storage.setEast(&passage);
+    storage.setNorth(&armory);
+
+    corridor.setWest(&great);
+    corridor.setEast(&balcony);
+
+    balcony.setWest(&corridor);
+    balcony.setNorth(&throne);
+
+    armory.setSouth(&storage);
+    armory.setNorth(&corner);
+
+    throne.setWest(&forest);
+    throne.setNorth(&secret);
+    throne.setSouth(&balcony);
+
+    lower.setEast(&corner);
+    lower.setSouth(&treasure);
+
+    treasure.setNorth(&lower);
+
+    corner.setWest(&lower);
+    corner.setEast(&gate);
+    corner.setSouth(&armory);
+
+    gate.setWest(&corner);
+    gate.setSouth(&forest);
+
+    secret.setSouth(&throne);
+
+
+}
+
 int main() {
     Player player;
 
-
-    ForestRoom forest;
-    StorageRoom storage;
-    StartRoom start;
-
-    start.setNorth(&forest);
-    start.setWest(&storage);
-
-    forest.setSouth(&start);
-    storage.setEast(&start);
-    
+    setupMap();
 
     Room* currentRoom = &start;
 

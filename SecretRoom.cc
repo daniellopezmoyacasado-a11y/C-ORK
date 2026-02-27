@@ -4,7 +4,7 @@
 
 
 SecretRoom::SecretRoom() {
-    description = "This is the kings hidden chamber, the walls are filled with bookcases.\nIn the room there is a large wooden desk, you can see something shiny on it.\n Behind the desk there's a lever, and there's also a chain hanging from the west wall, it seems to be attached to some mechanism. \nAs you approach the desk, you notice a trap dor is hidden right in the center of the room, it feels like it can be opened remotely.";
+    description = "This is the kings hidden chamber, the walls are filled with bookcases.\nIn the room there is a large wooden desk, you can see something shiny on it, right beside an open book.\n Behind the desk there's a lever, and there's also a chain hanging from the west wall, it seems to be attached to some mechanism. \nAs you approach the desk, you notice a trap dor is hidden right in the center of the room, it feels like it can be opened remotely.";
     items.push_back("KingsKey");
     premonition = false;
 }
