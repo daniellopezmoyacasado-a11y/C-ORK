@@ -60,7 +60,7 @@ void LowerRoom::talk(string npcName) {
                 npcs[i].talk();
                 troll_talked++;
                 return;
-            } else if (troll_talked > 3) {
+            } else if (troll_talked >= 3) {
                 doorUnlocked = true;
                 description = "You are in a storage room, there are a few empty boxes lining the walls.\nOn the south side there is an archway.\nThe troll stands to the side, he appears to be doing his bussines inside an empty barrel.";
                 cout << "troll: Thank you. Friend." << endl;

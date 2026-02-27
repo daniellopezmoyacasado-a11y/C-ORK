@@ -35,8 +35,8 @@ Room* GateRoom::go(string direction, Player& player) {
 
 void GateRoom::use(string item, Player& player) {
     
-    if (item == "KingsKey") {
-        if (!player.hasItem("KingsKey")) {
+    if (item == "kingskey") {
+        if (!player.hasItem("kingskey")) {
             cout << "You don't have the " + item + ". "<< endl;
             return;
         }
