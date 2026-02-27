@@ -12,7 +12,7 @@ ForestRoom::ForestRoom() {
     wolf.addDialogue("Grrrr...");
     npcs.push_back(wolf);
     wolftamed = false;
-    roomName = "forest";
+    roomName = "Forest";
 }
 
 Room* ForestRoom::go(string direction, Player& player) {
@@ -22,7 +22,7 @@ Room* ForestRoom::go(string direction, Player& player) {
             return this;
         } else {
             cout << "You go though the trees, only to find walls of stone surrounding it. Seems like it was only an inner garden." << endl;
-            roomName = "garden";
+            roomName = "Garden";
             return Room::go(direction, player);
         }
     } 

@@ -7,6 +7,7 @@ PassageRoom::PassageRoom() {
     description = "You are in a long hallway heading west";
 
     doorUnlocked = false;
+    roomName = "West Passage";
 }
 
 Room* PassageRoom::go(string direction, Player& player) {

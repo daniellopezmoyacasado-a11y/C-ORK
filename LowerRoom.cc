@@ -37,8 +37,8 @@ Room* LowerRoom::go(string direction, Player& player) {
 
 void LowerRoom::use(string item, Player& player) {
     
-    if (item == "Sword") {
-        if (!player.hasItem("Sword")) {
+    if (item == "sword") {
+        if (!player.hasItem("sword")) {
         cout << "You don't have the " + item + ". "<< endl;
         return;
         }
@@ -67,10 +67,13 @@ void LowerRoom::talk(string npcName) {
                 return;
             } else if (troll_talked == 2) {
                 cout << "You give one final push to the troll, he finally breaks free."<< endl;
+                doorUnlocked = true;
+                troll_talked ++;
                 return;
             }
             cout << "You push agains the troll, he moves a little" << endl;
             cout << "troll: Yes. Continue. Friend" << endl;
+            troll_talked ++;
             return;
         }
     }

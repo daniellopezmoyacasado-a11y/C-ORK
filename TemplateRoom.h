@@ -1,5 +1,5 @@
-#ifndef STARTROOM_H
-#define STARTROOM_H
+#ifndef TEMPLATEROOM_H
+#define TEMPLATEROOM_H
 
 #include "Room.h"
 

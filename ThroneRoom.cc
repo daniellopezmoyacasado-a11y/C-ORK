@@ -17,21 +17,22 @@ ThroneRoom::ThroneRoom() {
 
     jesterBeat = false;
     jesterBribed = false;
+    roomName = "Throne Room";
 }
 
 Room* ThroneRoom::go(string direction, Player& player) {
     if (direction == "north") {
-        if (!jesterBeat || !jesterBribed ) {
-            cout << "Why would you try to go north" << endl;
+        if (!jesterBeat && !jesterBribed ) {
+            cout << "Why would you try to go north?" << endl;
             return this;
         } else {
             cout << "You go behind the throne to find a secret room" << endl;
             return northRoom;
         }
     }
-    if (direction == "east") {
+    if (direction == "south") {
             cout << "You go east to the royal balcony" << endl;
-            return eastRoom;
+            return southRoom;
     }
 
     if (direction == "west") {
@@ -55,7 +56,7 @@ void ThroneRoom::use(string item, Player& player) {
             description = "A beautiful room stands all around you.\n Banners, torches, lamps, ornate structures are all organized leading to a stone chair on the north end of the room.\n A humiliated jester lays on the floor, crying";
             jesterBeat = true;
         } else {
-            cout << "You raise your arm to strike but don't find it in your heart to strike";
+            cout << "You raise your arm to strike but don't find it in your heart to strike" << endl;;
         }
         return;
     }

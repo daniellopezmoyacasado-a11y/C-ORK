@@ -1,6 +1,6 @@
 #include <iostream>
 #include "ArmoryRoom.h"
-
+#include "Player.h"
 
 ArmoryRoom::ArmoryRoom() {
     description = "You are in the armory, there seems to be some useful equipment here.\nIt seems like you can go North and East from here";
@@ -16,12 +16,12 @@ Room* ArmoryRoom::go(string direction, Player& player) {
     }
     if (direction == "north") {
         cout << "you go north" << endl;
-        return eastRoom;
+        return northRoom;
     }
 
     if (direction == "south") {
         cout << "you go south" << endl;
-        return eastRoom;
+        return southRoom;
     }
 
 

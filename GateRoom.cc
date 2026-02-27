@@ -5,8 +5,9 @@
 
 
 GateRoom::GateRoom() {
-    description = "You stand in front of a great gate, outside, you can hear the sound of the wind whistling past trees, water rushing down a nearby river, and a distant owl.\nThere is a large Key hole with the seal of the key.";
+    description = "You stand in front of a great gate, outside, you can hear the sound of the wind whistling past trees, water rushing down a nearby river, and a distant owl.\nThere is a large Key hole with the seal of the king.";
     doorUnlocked = false;
+    roomName = "Main Gate";
 }
 
 Room* GateRoom::go(string direction, Player& player) {

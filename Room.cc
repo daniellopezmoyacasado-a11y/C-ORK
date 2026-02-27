@@ -9,15 +9,19 @@ void Room::look() {
 
     if (items.size() > 0) {
         cout << "Items here: ";
-        for (int i = 0; i < items.size(); i++)
-            cout << items[i] << " ";
+        for (int i = 0; i < items.size(); i++) {
+            if(i != 0) cout << ", ";
+            cout << items[i];
+        }
         cout << endl;
     }
 
     if (npcs.size() > 0) {
         cout << "NPCs here: ";
-        for (int i = 0; i < npcs.size(); i++)
-            cout << npcs[i].getName() << " ";
+        for (int i = 0; i < npcs.size(); i++) {
+            if(i != 0) cout << ", ";
+            cout << npcs[i].getName();
+        }
         cout << endl;
     }
 }

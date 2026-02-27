@@ -2,6 +2,7 @@
 #define ARMORYROOM_H
 
 #include "Room.h"
+#include <string>
 
 class ArmoryRoom : public Room {
 private:

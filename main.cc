@@ -73,6 +73,7 @@ void setupMap() {
 
     armory.setSouth(&storage);
     armory.setNorth(&corner);
+    armory.setEast(&forest);
 
     throne.setWest(&forest);
     throne.setNorth(&secret);

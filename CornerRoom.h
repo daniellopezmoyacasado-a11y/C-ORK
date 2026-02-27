@@ -2,6 +2,7 @@
 #define CORNERROOM_H
 
 #include "Room.h"
+#include <string>
 
 class CornerRoom : public Room {
 private:

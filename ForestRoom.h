@@ -2,6 +2,7 @@
 #define FORESTROOM_H
 
 #include "Room.h"
+#include <string>
 
 class ForestRoom : public Room {
 private:

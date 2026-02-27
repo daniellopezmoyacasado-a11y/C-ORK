@@ -7,7 +7,7 @@ CorridorRoom::CorridorRoom() {
     description = "You are in a long corridor heading east.";
 
     doorUnlocked = false;
-    roomName = "Corridor";
+    roomName = "East Corridor";
 }
 
 Room* CorridorRoom::go(string direction, Player& player) {

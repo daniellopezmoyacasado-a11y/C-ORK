@@ -2,14 +2,10 @@
 #include <iostream>
 #include "Player.h"
 
-StorageRoom::StorageRoom(Room* west) { //old version
+StorageRoom::StorageRoom() {
     description = "You are in a room full of barrels, most of them are emty though. There is an open door to the north";
     items.push_back("meat");
-}
-
-StorageRoom::StorageRoom() {
-    description = "You are in a room full of barrels, most of them are emty though";
-    items.push_back("meat");
+    roomName = "Storage";
 }
 
 Room* StorageRoom::go(string direction, Player& player) {

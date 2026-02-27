@@ -2,6 +2,7 @@
 #define BALCONYROOM_H
 
 #include "Room.h"
+#include <string>
 
 class BalconyRoom : public Room {
 private:

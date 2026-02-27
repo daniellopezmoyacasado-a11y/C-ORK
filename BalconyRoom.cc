@@ -7,9 +7,9 @@
 BalconyRoom::BalconyRoom() {
     description = "You are in a long hall that is open on the east. You can see a forest extending far into mountains that loom like giant shadows in the night. \nThere is only an exit north, there is a knight guarding the way.\n He looks seriously skilled\n";
 
-    NPC test("knight");
-    test.addDialogue("...");
-    npcs.push_back(test);
+    NPC knight("knight");
+    knight.addDialogue("...");
+    npcs.push_back(knight);
 
     knightDead = false;
     roomName = "Balcony";
@@ -61,6 +61,7 @@ void BalconyRoom::use(string item, Player& player) {
             cout << "You put all of your strength into a final swing." << endl;
             cout << "The knight's head makes a satisfying thud as it hits the ground"<< endl;
             knightDead = true;
+            return;
         }
     }
 
