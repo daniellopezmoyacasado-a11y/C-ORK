@@ -2,6 +2,7 @@
 #define CORRIDORROOM_H
 
 #include "Room.h"
+#include <string>
 
 class CorridorRoom : public Room {
 private:

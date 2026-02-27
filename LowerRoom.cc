@@ -1,6 +1,7 @@
 #include <iostream>
 #include "LowerRoom.h"
 #include "Globals.h"
+#include "Player.h"
 
 
 LowerRoom::LowerRoom() {

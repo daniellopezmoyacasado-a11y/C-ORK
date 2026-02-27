@@ -1,5 +1,6 @@
 #include <iostream>
 #include "StartRoom.h"
+#include "Player.h"
 
 
 StartRoom::StartRoom() {

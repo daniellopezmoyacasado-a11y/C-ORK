@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ForestRoom.h"
 #include "Globals.h"
+#include "Player.h"
 
 
 ForestRoom::ForestRoom() {

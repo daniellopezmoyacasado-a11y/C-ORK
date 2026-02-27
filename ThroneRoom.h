@@ -1,7 +1,9 @@
-#ifndef STARTROOM_H
-#define STARTROOM_H
+#ifndef THRONEROOM_H
+#define THRONEROOM_H
 
 #include "Room.h"
+
+class Player;
 
 class ThroneRoom : public Room {
 private:

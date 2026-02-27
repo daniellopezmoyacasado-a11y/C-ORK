@@ -2,6 +2,7 @@
 #define GREATROOM_H
 
 #include "Room.h"
+#include <string>
 
 class GreatRoom : public Room {
 private:

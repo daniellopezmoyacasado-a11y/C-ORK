@@ -1,6 +1,7 @@
 #include <iostream>
 #include "BalconyRoom.h"
 #include "Globals.h"
+#include "Player.h"
 
 
 BalconyRoom::BalconyRoom() {

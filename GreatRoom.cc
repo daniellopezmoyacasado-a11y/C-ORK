@@ -1,5 +1,6 @@
 #include <iostream>
 #include "GreatRoom.h"
+#include "Player.h"
 
 
 GreatRoom::GreatRoom() {

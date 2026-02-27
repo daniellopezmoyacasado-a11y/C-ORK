@@ -1,6 +1,7 @@
 #include <iostream>
 #include "SecretRoom.h"
 #include "Globals.h"
+#include "Player.h"
 
 
 SecretRoom::SecretRoom() {

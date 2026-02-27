@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TemplateRoom.h"
+#include "Player.h"
 
 
 TemplateRoom::TemplateRoom() {

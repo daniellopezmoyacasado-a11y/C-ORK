@@ -1,5 +1,6 @@
 #include "StorageRoom.h"
 #include <iostream>
+#include "Player.h"
 
 StorageRoom::StorageRoom(Room* west) { //old version
     description = "You are in a room full of barrels, most of them are emty though. There is an open door to the north";

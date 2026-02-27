@@ -1,6 +1,7 @@
 #include <iostream>
 #include "GateRoom.h"
 #include "Globals.h"
+#include "Player.h"
 
 
 GateRoom::GateRoom() {

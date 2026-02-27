@@ -1,5 +1,8 @@
 #include <iostream>
 #include "Room.h"
+#include "Player.h"
+
+class Player; //if i didn't add this for some reason throne room didn't work...
 
 void Room::look() {
     cout << description << endl;

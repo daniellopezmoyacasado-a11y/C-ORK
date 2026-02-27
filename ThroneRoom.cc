@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ThroneRoom.h"
+#include "Player.h"
 
 
 ThroneRoom::ThroneRoom() {

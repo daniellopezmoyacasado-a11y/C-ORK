@@ -1,5 +1,6 @@
 #include <iostream>
 #include "CorridorRoom.h"
+#include "Player.h"
 
 
 CorridorRoom::CorridorRoom() {

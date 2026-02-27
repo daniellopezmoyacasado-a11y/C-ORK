@@ -1,5 +1,6 @@
 #include <iostream>
 #include "CornerRoom.h"
+#include "Player.h"
 
 
 CornerRoom::CornerRoom() {

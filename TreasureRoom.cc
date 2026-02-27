@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TreasureRoom.h"
+#include "Player.h"
 
 
 TreasureRoom::TreasureRoom() {

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PassageRoom.h"
+#include "Player.h"
 
 
 PassageRoom::PassageRoom() {

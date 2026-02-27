@@ -1,7 +1,8 @@
-#ifndef STARTROOM_H
-#define STARTROOM_H
+#ifndef GATEROOM_H
+#define GATEROOM_H
 
 #include "Room.h"
+#include <string>
 
 class GateRoom : public Room {
 private:
