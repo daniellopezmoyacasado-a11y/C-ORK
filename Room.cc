@@ -79,3 +79,7 @@ void Room::use(string item, Player& player) {
         cout << "You don't have that item." << endl;
     }
 }
+
+string Room::getName() {
+    return roomName;
+}

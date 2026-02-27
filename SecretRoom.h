@@ -1,14 +1,14 @@
-#ifndef FORESTROOM_H
-#define FORESTROOM_H
+#ifndef STARTROOM_H
+#define STARTROOM_H
 
 #include "Room.h"
 
-class ForestRoom : public Room {
+class SecretRoom : public Room {
 private:
-    bool wolftamed;
+    bool premonition;
 
 public:
-    ForestRoom();
+    SecretRoom();
     Room* go(string direction, Player& Player) override;
     void use(string item, Player& player) override;
 };

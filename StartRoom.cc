@@ -1,29 +1,20 @@
 #include <iostream>
 #include "StartRoom.h"
 
-StartRoom::StartRoom(Room* north, Room* west) { //old version, keep temporarily
-    description = "You are in a stone chamber.";
-    items.push_back("key");
-
-    NPC guard("guard");
-    guard.addDialogue("Hello traveler.");
-    guard.addDialogue("The forest is dangerous.");
-    npcs.push_back(guard);
-
-    northRoom = north;
-    doorUnlocked = false;
-}
 
 StartRoom::StartRoom() {
-    description = "You are in a stone chamber.";
+    roomName = "Cell";
+    description = "You are in a stone chamber. \nThere is someone here in the dark, he's laying wounded on the ground \nA foul smell is eminating from him.";
     items.push_back("key");
 
     NPC guard("guard");
-    guard.addDialogue("Hello traveler.");
-    guard.addDialogue("The forest is dangerous.");
+    guard.addDialogue("You... Ugh");
+    guard.addDialogue("Please take m-");
+    guard.addDialogue("escape befo-...");
     npcs.push_back(guard);
 
     doorUnlocked = false;
+    guardDead = false;
 }
 
 Room* StartRoom::go(string direction, Player& player) {
@@ -32,7 +23,7 @@ Room* StartRoom::go(string direction, Player& player) {
             cout << "The north door is locked." << endl;
             return this;
         }
-        cout << "You go north." << endl;
+        cout << "You go past the door and make your way up a spiral staircase.\nyou put you hands on the walls to guide your way, the walls are icy cold and grimy with dirt." << endl;
         return northRoom;
     }
 
@@ -57,4 +48,19 @@ void StartRoom::use(string item, Player& player) {
 
     
     Room::use(item, player);// this way it goes to default fallback 
+}
+
+void StartRoom::talk(string npcName) {
+    for (int i = 0; i < npcs.size(); i++) {
+        if (npcs[i].getName() == npcName) {
+            if(!guardDead) {
+                npcs[i].talk();
+                guardDead = true;
+                return;
+            }
+            cout << "The guard looks dead." << endl;
+            return;
+        }
+    }
+    cout << "No one by that name here." << endl;
 }

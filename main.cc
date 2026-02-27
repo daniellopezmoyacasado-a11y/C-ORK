@@ -8,6 +8,7 @@
 using namespace std;
 
 bool game_end = false;
+bool drawbridge_down = false; //necessary to beat the game
 
 string toLowerCase(string text) { //almost forgot Uppercase cases
     for (int i = 0; i < text.length(); i++) {
@@ -38,11 +39,16 @@ int main() {
     string command;
     string argument;
 
-    cout << "You wake up in a dark room, only one memory remains in your head, escape..." << endl;
+    cout << "You wake up in a dark room, your head feels drowned in the darkness." << endl;
     
 
     while (!game_end) {
-        cout << "> ";
+        //cout << "> ";
+
+        cout << "[" 
+        << currentRoom->getName() 
+        << "] > ";
+
         cin >> command;
         command = toLowerCase(command);
 

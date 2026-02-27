@@ -10,6 +10,7 @@ using namespace std;
 
 class Room {
 protected:
+    string roomName;
     string description;
     vector<string> items;
     vector<NPC> npcs;
@@ -30,6 +31,7 @@ public:
     void setSouth(Room* r);
     void setEast(Room* r);
     void setWest(Room* r);
+    string getName();
     
     //I didn't remember these existed but
     //apparently virtual funcs allow 

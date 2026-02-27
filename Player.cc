@@ -12,6 +12,7 @@ bool Player::hasItem(string item) {
 void Player::showInventory() {
     cout << "Inventory: ";
      for (set<string>::iterator it = inventory.begin(); it != inventory.end(); it++) {
+        if (it != inventory.begin()) cout << ",";
         cout << *it << " ";
     }
     cout << endl;

@@ -3,14 +3,13 @@
 
 #include "Room.h"
 
-class StartRoom : public Room {
+class ThroneRoom : public Room {
 private:
-    bool doorUnlocked;
-    bool guardDead;
+    bool jesterBribed;
+    bool jesterBeat;
 
 public:
-    StartRoom(Room* north, Room* west);
-    StartRoom();
+    ThroneRoom();
     Room* go(string direction, Player& Player) override;
     void use(string item, Player& player) override;
     void talk(string npcName) override;
