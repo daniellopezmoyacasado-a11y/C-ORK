@@ -13,6 +13,8 @@ GO (NORTH, WEST, EAST, SOUTH)
 TAKE [ITEM]
 
 
+In its current state it's a very small experience, but I hope you enjoy it :D
+
 INSTALLATION
 
 in the current state you only need to run the following command in the terminal:
@@ -23,3 +25,5 @@ and then execute
 
 $> ./game
 
+
+(I have also included a makefile you can execute $> make).
