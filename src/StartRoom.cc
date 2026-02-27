@@ -52,7 +52,7 @@ void StartRoom::use(string item, Player& player) {
 }
 
 void StartRoom::talk(string npcName) {
-    for (int i = 0; i < npcs.size(); i++) {
+    for (size_t i = 0; i < npcs.size(); i++) {
         if (npcs[i].getName() == npcName) {
             if(!guardDead) {
                 npcs[i].talk();

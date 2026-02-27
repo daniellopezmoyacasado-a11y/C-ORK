@@ -1,0 +1,9 @@
+/build/
+/game
+/*.o
+/*.d
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*~

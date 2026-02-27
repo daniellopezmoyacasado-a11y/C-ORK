@@ -22,7 +22,7 @@ bool game_end = false;
 bool drawbridge_down = false; //necessary to beat the game
 
 string toLowerCase(string text) { //almost forgot Uppercase cases
-    for (int i = 0; i < text.length(); i++) {
+    for (size_t i = 0; i < text.length(); i++) {
         if (text[i] >= 'A' && text[i] <= 'Z') {
             text[i] = text[i] + 32;  //ASCII uppercase to lowercase
         }

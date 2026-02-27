@@ -19,11 +19,8 @@ INSTALLATION
 
 in the current state you only need to run the following command in the terminal:
 
-$> g++ *.cc -o game
+$> make
 
 and then execute
 
 $> ./game
-
-
-(I have also included a makefile you can execute $> make).

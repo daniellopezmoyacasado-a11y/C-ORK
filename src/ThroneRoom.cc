@@ -82,7 +82,7 @@ void ThroneRoom::use(string item, Player& player) {
 }
 
 void ThroneRoom::talk(string npcName) {
-    for (int i = 0; i < npcs.size(); i++) {
+    for (size_t i = 0; i < npcs.size(); i++) {
         if (npcs[i].getName() == npcName) {
             if (jesterBeat) {
                 cout << "The jester is softly sobbing" << endl;

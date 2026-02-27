@@ -54,7 +54,7 @@ void LowerRoom::use(string item, Player& player) {
 }
 
 void LowerRoom::talk(string npcName) {
-    for (int i = 0; i < npcs.size(); i++) {
+    for (size_t i = 0; i < npcs.size(); i++) { //size_t to remove warnings (can also just cast)
         if (npcs[i].getName() == npcName) {
             if(troll_talked == 0) {
                 npcs[i].talk();

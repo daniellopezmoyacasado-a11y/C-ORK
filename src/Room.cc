@@ -9,7 +9,7 @@ void Room::look() {
 
     if (items.size() > 0) {
         cout << "Items here: ";
-        for (int i = 0; i < items.size(); i++) {
+        for (size_t i = 0; i < items.size(); i++) {
             if(i != 0) cout << ", ";
             cout << items[i];
         }
@@ -18,7 +18,7 @@ void Room::look() {
 
     if (npcs.size() > 0) {
         cout << "NPCs here: ";
-        for (int i = 0; i < npcs.size(); i++) {
+        for (size_t i = 0; i < npcs.size(); i++) {
             if(i != 0) cout << ", ";
             cout << npcs[i].getName();
         }
@@ -40,7 +40,7 @@ void Room::setWest(Room* r)  { westRoom = r; }
 
 
 void Room::take(string item, Player& player) {
-    for (int i = 0; i < items.size(); i++) {
+    for (size_t i = 0; i < items.size(); i++) {
         if (items[i] == item) {
             player.addItem(item);
             items.erase(items.begin() + i);
@@ -52,7 +52,7 @@ void Room::take(string item, Player& player) {
 }
 
 void Room::talk(string npcName) {
-    for (int i = 0; i < npcs.size(); i++) {
+    for (size_t i = 0; i < npcs.size(); i++) {
         if (npcs[i].getName() == npcName) {
             npcs[i].talk();
             return;
@@ -62,6 +62,7 @@ void Room::talk(string npcName) {
 }
 
 Room* Room::go(string direction, Player& player) {
+    (void)player;
 
     if (direction == "north" && northRoom != NULL)
         return northRoom;

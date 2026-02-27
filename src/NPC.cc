@@ -14,7 +14,7 @@ string NPC::getName() {
 }
 
 void NPC::talk() {
-    for (int i = 0; i < dialogue.size(); i++) {
+    for (size_t i = 0; i < dialogue.size(); i++) {
         cout << name << ": " << dialogue[i] << endl;
     }
 }
