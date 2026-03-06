@@ -1,5 +1,7 @@
+# C++ Bash Terminal Zork
 This is a Zork Like test game.
 
+## How to play
 like the original 80s Zork, the game only recognizes certain words, the list of Usable Commands are:
 
 LOOK
@@ -15,7 +17,7 @@ TAKE [ITEM]
 
 In its current state it's a very small experience, but I hope you enjoy it :D
 
-INSTALLATION
+## INSTALLATION
 
 in the current state you only need to run the following command in the terminal:
 
